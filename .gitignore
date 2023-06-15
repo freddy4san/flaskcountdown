@@ -1,0 +1,5 @@
+# .gitignore
+
+herokuflask
+
+__pycache__
