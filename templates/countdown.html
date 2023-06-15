@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Evil lady Birthday</title>       
+    <title>Evil lady Birthday</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/countdown.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">    
                    
   </head>
   <body>
 
+    {% block javascripts %}     
+    <script src="{{ url_for('static', filename='js/countdown.js') }}"></script>       
+    {% endblock %} 
+
+    
+    
+    <div id="timer">
+        <div id="days"></div>
+        <div id="hours"></div>
+        <div id="minutes"></div>
+        <div id="seconds"></div>
+    </div>
 
     
     <div id="progress">Until Saritah's Birthday.....................................</div>
