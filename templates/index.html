@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Evil lady Birthday</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">  
+    </head>
+
+    <body>
+        {% block javascripts %}     
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>       
+        {% endblock %}
+
+        <div  class="container">
+            This is the flame of fate, make a wish and click on me so I will tell you a secret!      
+        </div>   
+
+        <div class="glow" onclick="myFunction()"></div>
+        <div class="flame"></div>
+
+        <div class="container">
+            {% if output %}
+            <p> {{ output }}</p>
+            {% endif %}
+        </div>
+    </body>
+</html>
