@@ -11,14 +11,15 @@
         <script src="{{ url_for('static', filename='js/script.js') }}"></script>       
         {% endblock %}
 
-        <div  class="container">
-            This is the flame of fate, make a wish and click on me so I will tell you a secret!      
-        </div>   
+        <div  class="container ">
+            <span class="type" style="--n:200">This is the flame of fate, make a wish and click on me so I will tell you a secret!</span>
 
+        </div>
+        
         <div class="glow" onclick="myFunction()"></div>
         <div class="flame"></div>
 
-        <div class="container">
+        <div class="dialtext">
             {% if output %}
             <p> {{ output }}</p>
             {% endif %}

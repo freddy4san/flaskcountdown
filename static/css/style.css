@@ -1,10 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap);
 
   .container {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 20px;
-    position: relative;
+    border: 5px solid;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
   }
   
   @keyframes reveal {
@@ -20,6 +22,26 @@
     white-space: nowrap;
     overflow: hidden;
     animation: reveal 6s steps(30, end) none;
+  }
+  .type {
+    color:#0000;
+    background:
+      linear-gradient(-90deg,#00DFFC 5px,#0000 0) 10px 0,
+      linear-gradient(#00DFFC 0 0) 0 0;
+    background-size:calc(var(--n)*1ch) 200%;
+    -webkit-background-clip:padding-box,text;
+    background-clip:padding-box,text;
+    background-repeat:no-repeat;
+    animation: 
+     b .7s infinite steps(1),   
+     t calc(var(--n)*.1s) steps(var(--n)) forwards;
+  }
+  
+  @keyframes t{
+    from {background-size:0 200%}
+  }
+  @keyframes b{
+    50% {background-position:0 -100%,0 0}
   }
 
 
@@ -92,7 +114,7 @@
     display: flex;
     flex-direction: column;
     font-family: Verdana;
-    font-size: 14px;
+    font-size: large;
     gap: 10px;
     justify-content: flex-end;
     min-height: 100vh;
